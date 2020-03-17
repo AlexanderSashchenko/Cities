@@ -47,6 +47,7 @@ public class CityController {
 
     @PostMapping("/end")
     public String endGame() {
+        cityService.updateAllCitiesIfPlayedToFalse();
         return "Thank you for playing!";
     }
 
